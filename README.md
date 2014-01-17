@@ -15,6 +15,7 @@ What happens under the hood:
 
 #### Dependencies ####
 
+* build-essential
 * python
 * git
 * apt

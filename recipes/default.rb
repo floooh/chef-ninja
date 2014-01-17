@@ -4,11 +4,10 @@
 #
 # Copyright (C) 2014 Andre Weissflog 
 # 
+include_recipe "build-essential"
 include_recipe "apt"
 include_recipe "python"
 include_recipe "git"
-
-package "build-essential"
 
 cache_path = Chef::Config['file_cache_path']
 repo = node['ninja']['url']
