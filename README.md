@@ -1,6 +1,6 @@
 ### Description ###
 
-Installs most uptodate release version of ninja (the build system).
+This is a Chef cookbook to install an uptodate release version of ninja (the build system).
 
 What happens under the hood:
 
