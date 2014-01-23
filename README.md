@@ -4,7 +4,7 @@ This is a Chef cookbook to install an uptodate release version of ninja (the bui
 
 What happens under the hood:
 
-* git clone from git://github.com/martine/ninja.git to /var/chef/cache/ninja
+* git clone from git://github.com/martine/ninja.git to /opt/ninja
 * run ninja/bootstrap.py
 * setup a symbolic link in /usr/local/bin/ninja
 

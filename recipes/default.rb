@@ -10,12 +10,11 @@ include_recipe 'apt'
 include_recipe 'python'
 include_recipe 'git'
 
-cache_path = Chef::Config['file_cache_path']
 repo = node['ninja']['url']
 branch = node['ninja']['branch']
 
 # git-clone to branch name "release"
-git "#{cache_path}/ninja" do
+git '/opt/ninja' do
   repository repo
   revision branch
   action :export
@@ -24,7 +23,7 @@ end
 
 # ...build it...
 bash 'build_ninja' do
-  cwd "#{cache_path}/ninja"
+  cwd '/opt/ninja'
   code <<-EOH
   ./bootstrap.py
   EOH
@@ -35,6 +34,6 @@ end
 # ...create link...
 link 'create_link' do
   target_file '/usr/local/bin/ninja'
-  to "#{cache_path}/ninja/ninja"
+  to '/opt/ninja/ninja'
   action :nothing
 end
