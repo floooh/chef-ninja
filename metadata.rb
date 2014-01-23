@@ -1,3 +1,4 @@
+# encoding: UTF-8
 name             'ninja'
 maintainer       'Andre Weissflog'
 maintainer_email 'floooh@gmail.com'
@@ -9,5 +10,3 @@ depends          'build-essential'
 depends          'python'
 depends          'git'
 depends          'apt'
-
-
