@@ -16,8 +16,8 @@ branch = node['ninja']['branch']
 
 # git-clone to branch name "release"
 git "#{cache_path}/ninja" do
-  repository "#{repo}"
-  revision "#{branch}"
+  repository repo
+  revision branch
   action :export
   notifies :run, 'bash[build_ninja]'
 end
